@@ -4,14 +4,10 @@ from webdriver_manager.chrome import ChromeDiverManager
 import pandas as pd
 import time
 
-def init_browser():
-    # Setup splinter
+def scrape():
     executable_path = {'executable_path': ChromeDriverManager().install()}
     browser = Browser('chrome', **executable_path, headless=False)
-
-
-def scrape():
-    browser = init_browser()
+    
     # Store the Mars data in mars_data 
     mars_data = {}
     
